@@ -1,6 +1,5 @@
 const axios = require('axios');
 
-
 const apiURL = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt';
 
 async function getData(req, res) {
