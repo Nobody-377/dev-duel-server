@@ -1,28 +1,23 @@
-const axios = require('axios')
-const express = require('express');
-const route = express.Router();
+const axios = require('axios');
 
-async function getData (){
 
 const apiURL = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt';
 
 async function getData(req, res) {
     try {
+     
         let response = await axios.get(apiURL);
         
+      
         console.log(response.data); 
    
-        res.json({ joke: response.data }); 
+       
+        res.status(200).json({ joke: response.data }); 
         
     } catch (err) {
         console.log(err);
         res.status(500).json({ error: "Failed to fetch data" });
     }
 }
-}
 
-
-
-
-module.exports = { getData }
-
+module.exports = { getData };
