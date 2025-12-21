@@ -1,7 +1,10 @@
 const express = require('express');
-const app = express()
 const route = express.Router();
+const getData = require("./helper/jpkeapi.js")
 
-import {getData} from './helper/jokeapi.js'
+console.log(getData);
 
 route.get('/',getData)
+
+
+export default route;
