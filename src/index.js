@@ -8,9 +8,9 @@ app.use(express.json());
 const PORT = 3000;
 
 
-app.use("/api", route)
+app.use("/", route)
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log('server started');
     
 })
